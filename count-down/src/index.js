@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 
 
 ReactDOM.render(
-  <div>Countdown APP</div>, document.getElementById('root') //where we want to render it, already have div for it so?
+  <App></App>,
+  document.getElementById('root') //where we want to render it, already have div for it so?
 );
