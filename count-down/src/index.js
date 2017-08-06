@@ -4,6 +4,6 @@ import App from './App';
 
 
 ReactDOM.render(
-  <App></App>,
+  <App />,
   document.getElementById('root') //where we want to render it, already have div for it so?
 );
