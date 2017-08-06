@@ -3,7 +3,15 @@ import React, { Component } from 'react'; // React { Component } cause we also w
 class App extends Component {
   render() {
     return(
-      <div>Countdown App component</div>
+      <div>
+        <div>Countdown to December 24, 2017</div>
+        <div>
+          <div>14 days</div>
+          <div>30 hours</div>
+          <div>15 minutes</div>
+          <div>20 seconds</div>
+        </div>
+      </div>
     )
   }
 }
