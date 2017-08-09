@@ -3,10 +3,18 @@ import './App.css';
 
 class App extends Component {
   //JSX make different keyword to make classname, cause class is reserved, have to use className
+  constructor(props) {
+    super(props);
+    this.state = {
+      deadline: 'December 24, 2017'
+    }
+  }
   render() {
-    return(
+    return (
       <div className="App">
-        <div className="App-title">Countdown to December 24, 2017</div>
+        <div className="App-title">
+          Countdown to {this.state.deadline}
+        </div>
         <div>
           <div className="Clock-days">14 days</div>
           <div className="Clock-hours">30 hours</div>
