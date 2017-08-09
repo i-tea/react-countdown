@@ -3,11 +3,16 @@ import './App.css';
 
 class App extends Component {
   //JSX make different keyword to make classname, cause class is reserved, have to use className
+  // <button onClick={()=> this.changeDeadline()}>Submit</button>  anonymous function, cause it's called just once, not loop
   constructor(props) {
     super(props);
     this.state = {
       deadline: 'December 24, 2017'
     }
+  }
+
+  changeDeadline() {
+    this.setState({deadline: 'November 24, 2017'})
   }
   render() {
     return (
@@ -23,7 +28,7 @@ class App extends Component {
         </div>
         <div>
           <input placeholder='new date' />
-          <button>Submit</button> 
+          <button onClick={()=> this.changeDeadline()}>Submit</button> 
         </div>
       </div>
     )
