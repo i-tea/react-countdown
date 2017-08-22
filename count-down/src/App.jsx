@@ -1,6 +1,7 @@
 import React, { Component } from 'react'; // React { Component } cause we also wanna use components
 import Clock from './Clock';
 import './App.css';
+import { Form, FormControl, Button } from 'react-bootstrap';
 
 class App extends Component {
   //JSX make different keyword to make classname, cause class is reserved, have to use className
@@ -27,13 +28,14 @@ class App extends Component {
         <Clock
           deadline={this.state.deadline}
         />
-        <div>
-          <input
+        <Form inline={true}>
+          <FormControl
+            className="Deadline-input"
             placeholder='new date'
             onChange={event => this.setState({newDeadline: event.target.value})}
           />
-          <button onClick={()=> this.changeDeadline()}>Submit</button> 
-        </div>
+          <Button onClick={()=> this.changeDeadline()}>Submit</Button> 
+        </Form>
       </div>
     )
   }
